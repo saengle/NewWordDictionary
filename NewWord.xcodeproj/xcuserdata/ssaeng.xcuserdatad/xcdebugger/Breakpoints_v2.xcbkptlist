@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "4469320C-B673-457B-AAC2-5FEC50F6F85A"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B7A10CF5-A28B-4A0A-B19C-73074A8DD680"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewWord/NewWordViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "NewWordViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "B7A10CF5-A28B-4A0A-B19C-73074A8DD680 - 454042f4a565ed29"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewWord.NewWordViewController.explanationLabel.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "NewWord"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ssaeng/Desktop/saeng/memories/1%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1/NewWord/NewWord/NewWordViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "B7A10CF5-A28B-4A0A-B19C-73074A8DD680 - 8686f494ad9b8915"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewWord.NewWordViewController.explanationLabel.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "NewWord"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ssaeng/Desktop/saeng/memories/1%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1/NewWord/NewWord/NewWordViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "B7A10CF5-A28B-4A0A-B19C-73074A8DD680 - d2b5649c69bfb76d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewWord.NewWordViewController.explanationLabel.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "NewWord"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ssaeng/Desktop/saeng/memories/1%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1/NewWord/NewWord/NewWordViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25">
+               </Location>
+               <Location
+                  uuid = "B7A10CF5-A28B-4A0A-B19C-73074A8DD680 - f9b2cab4c4622363"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewWord.NewWordViewController.explanationLabel.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "NewWord"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ssaeng/Desktop/saeng/memories/1%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1/NewWord/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "B7A10CF5-A28B-4A0A-B19C-73074A8DD680 - 5bf0243957daf45e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewWord.NewWordViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; NewWord.NewWordViewController"
+                  moduleName = "NewWord"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ssaeng/Desktop/saeng/memories/1%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1/NewWord/NewWord/NewWordViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25">
+               </Location>
+               <Location
+                  uuid = "B7A10CF5-A28B-4A0A-B19C-73074A8DD680 - 19c0187a1e0c5c92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewWord.NewWordViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;NewWord.NewWordViewController&gt;"
+                  moduleName = "NewWord"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ssaeng/Desktop/saeng/memories/1%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1/NewWord/NewWord/NewWordViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E6F77AF2BFCD2D400635E42 /* BMIResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F77AE2BFCD2D400635E42 /* BMIResultViewController.swift */; };
+		8EB2D5912BFC86BC00AF70CB /* BmiCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB2D5902BFC86BC00AF70CB /* BmiCalculatorViewController.swift */; };
 		8EBEB3A82BF73D2800BA834B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBEB3A72BF73D2800BA834B /* AppDelegate.swift */; };
 		8EBEB3AA2BF73D2800BA834B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBEB3A92BF73D2800BA834B /* SceneDelegate.swift */; };
 		8EBEB3AC2BF73D2800BA834B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBEB3AB2BF73D2800BA834B /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E6F77AE2BFCD2D400635E42 /* BMIResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIResultViewController.swift; sourceTree = "<group>"; };
+		8EB2D5902BFC86BC00AF70CB /* BmiCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiCalculatorViewController.swift; sourceTree = "<group>"; };
 		8EBEB3A42BF73D2800BA834B /* NewWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBEB3A72BF73D2800BA834B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EBEB3A92BF73D2800BA834B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				8EBEB3B22BF73D2A00BA834B /* LaunchScreen.storyboard */,
 				8EBEB3B52BF73D2A00BA834B /* Info.plist */,
 				8EBEB3BB2BF73DC400BA834B /* NewWordViewController.swift */,
+				8EB2D5902BFC86BC00AF70CB /* BmiCalculatorViewController.swift */,
+				8E6F77AE2BFCD2D400635E42 /* BMIResultViewController.swift */,
 			);
 			path = NewWord;
 			sourceTree = "<group>";
@@ -143,8 +149,10 @@
 			files = (
 				8EBEB3AC2BF73D2800BA834B /* ViewController.swift in Sources */,
 				8EBEB3A82BF73D2800BA834B /* AppDelegate.swift in Sources */,
+				8E6F77AF2BFCD2D400635E42 /* BMIResultViewController.swift in Sources */,
 				8EBEB3AA2BF73D2800BA834B /* SceneDelegate.swift in Sources */,
 				8EBEB3BC2BF73DC400BA834B /* NewWordViewController.swift in Sources */,
+				8EB2D5912BFC86BC00AF70CB /* BmiCalculatorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

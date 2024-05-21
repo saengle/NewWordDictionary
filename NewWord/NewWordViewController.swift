@@ -17,6 +17,7 @@ class NewWordViewController: UIViewController {
     @IBOutlet var secondRecommandWordLabel: UILabel!
     @IBOutlet var thirdRecommandWordLabel: UILabel!
     
+    @IBOutlet var recommandWordLabelList: [UILabel]!
     
     @IBOutlet var topView: UIView!
     @IBOutlet var wholeView: UIView!
@@ -37,27 +38,9 @@ class NewWordViewController: UIViewController {
         searchButton.backgroundColor = .black
         searchButton.tintColor = .white
         
-        firstRecommandWordLabel.sizeToFit()
-        firstRecommandWordLabel.textAlignment = .center
-        firstRecommandWordLabel.layer.cornerRadius = 10
-        firstRecommandWordLabel.layer.borderWidth = 1
-        firstRecommandWordLabel.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-        
-      
-        
-        secondRecommandWordLabel.sizeToFit()
-        secondRecommandWordLabel.textAlignment = .center
-        secondRecommandWordLabel.layer.cornerRadius = 10
-        secondRecommandWordLabel.layer.borderWidth = 1
-        secondRecommandWordLabel.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-        
-        
-        thirdRecommandWordLabel.sizeToFit()
-        thirdRecommandWordLabel.textAlignment = .center
-        thirdRecommandWordLabel.layer.cornerRadius = 10
-        thirdRecommandWordLabel.layer.borderWidth = 1
-        thirdRecommandWordLabel.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-        
+        setLabelUI(label: recommandWordLabelList[0])
+        setLabelUI(label: recommandWordLabelList[1])
+        setLabelUI(label: recommandWordLabelList[2])
         
         topView.layer.borderWidth = 2
         topView.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).cgColor
@@ -65,7 +48,7 @@ class NewWordViewController: UIViewController {
         wholeView.layer.borderWidth = 2
         wholeView.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).cgColor
         
-        bottomView.backgroundColor = .black
+        bottomView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         
         explanationLabel.text = ""
         explanationLabel.numberOfLines = 0
@@ -76,18 +59,27 @@ class NewWordViewController: UIViewController {
         
         makeRandomRecommand()
         
-        //1개로 세가지를 사용하려면 어떻게 하쥬 ..
+//        탭제스쳐레코나이져 1개로 세가지를 사용하려면 어떻게 하쥬 ..
         let tapFirst = UITapGestureRecognizer(target: self, action: #selector(NewWordViewController.tapFirstFunction))
         let tapSecond = UITapGestureRecognizer(target: self, action: #selector(NewWordViewController.tapSecondFunction))
         let tapThird = UITapGestureRecognizer(target: self, action: #selector(NewWordViewController.tapThirdFunction))
         
-        firstRecommandWordLabel.isUserInteractionEnabled = true
-        firstRecommandWordLabel.addGestureRecognizer(tapFirst)
-        secondRecommandWordLabel.isUserInteractionEnabled = true
-        secondRecommandWordLabel.addGestureRecognizer(tapSecond)
-        thirdRecommandWordLabel.isUserInteractionEnabled = true
-        thirdRecommandWordLabel.addGestureRecognizer(tapThird)
+        recommandWordLabelList[0].isUserInteractionEnabled = true
+        recommandWordLabelList[0].addGestureRecognizer(tapFirst)
+        recommandWordLabelList[1].isUserInteractionEnabled = true
+        recommandWordLabelList[1].addGestureRecognizer(tapSecond)
+        recommandWordLabelList[2].isUserInteractionEnabled = true
+        recommandWordLabelList[2].addGestureRecognizer(tapThird)
         
+        
+        addTapGestureRecognizer(labelList: recommandWordLabelList)
+    }
+    func setLabelUI(label: UILabel) {
+        label.sizeToFit()
+        label.textAlignment = .center
+        label.layer.cornerRadius = 10
+        label.layer.borderWidth = 1
+        label.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).cgColor
     }
     
     @IBAction func searchButtonTapped(_ sender: UIButton) {
@@ -96,34 +88,44 @@ class NewWordViewController: UIViewController {
     }
     
     private func makeRandomRecommand() {
-        let recommandLabelList: [UILabel] = [self.firstRecommandWordLabel, self.secondRecommandWordLabel, self.thirdRecommandWordLabel]
-        
         var tempRandomNumList = Set<Int>()
         while tempRandomNumList.count != 3 {
             tempRandomNumList.insert(Int.random(in: 0...dictKeyList.count-1))
         }
         for i in 0...2 {
-            recommandLabelList[i].text = dictKeyList[Array(tempRandomNumList)[i]]
+            recommandWordLabelList[i].text = dictKeyList[Array(tempRandomNumList)[i]]
         }
-        
     }
     
+    private func addTapGestureRecognizer(labelList: [UILabel]) {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(NewWordViewController.tapRecommandLabel))
+
+        recommandWordLabelList.forEach{$0.isUserInteractionEnabled = true}
+        recommandWordLabelList.forEach{$0.addGestureRecognizer(tap)}
+    }
     
     @objc func tapFirstFunction(sender:UITapGestureRecognizer) {
-        searchTextField.text = firstRecommandWordLabel.text
+        searchTextField.text = recommandWordLabelList[0].text
         explanationLabel.text = newWordDict[searchTextField.text!, default: "알맞은 검색어를 입력하세요."]
         makeRandomRecommand()
         }
     
     @objc func tapSecondFunction(sender:UITapGestureRecognizer) {
-        searchTextField.text = secondRecommandWordLabel.text
+        searchTextField.text = recommandWordLabelList[1].text
         explanationLabel.text = newWordDict[searchTextField.text!, default: "알맞은 검색어를 입력하세요."]
         makeRandomRecommand()
         }
     
     @objc func tapThirdFunction(sender:UITapGestureRecognizer) {
-        searchTextField.text = thirdRecommandWordLabel.text
+        searchTextField.text = recommandWordLabelList[2].text
         explanationLabel.text = newWordDict[searchTextField.text!, default: "알맞은 검색어를 입력하세요."]
         makeRandomRecommand()
         }
+    
+    @objc func tapRecommandLabel(_ sender: UITapGestureRecognizer) {
+        searchTextField.text = recommandWordLabelList[sender.view?.tag ?? 0].text
+        explanationLabel.text = newWordDict[searchTextField.text!, default: "알맞은 검색어를 입력하세요."]
+        makeRandomRecommand()
+    }
+
 }
