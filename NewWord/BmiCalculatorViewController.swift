@@ -15,6 +15,10 @@ class BmiCalculatorViewController: UIViewController {
     var userHeight = Int()
     var userWeight = Int()
     
+//    var savedData = [BMIRecord]()
+    var heightsList = [Any]()
+    var weightsList = [Any]()
+    
     @IBOutlet var doubleLineLabel: UILabel!
     
     @IBOutlet var heightTextFeild: UITextField!
@@ -33,6 +37,47 @@ class BmiCalculatorViewController: UIViewController {
         weightTextField.tag = 1
         configureButton()
     }
+    
+    private func checkDataBox() {
+        
+//        guard let oldData = UserDefaults.standard.object(forKey: "myrecord")  else {
+//            print("음 .. 어디가 문제니")
+//            savedData = []
+//            print(savedData)
+//            return
+//        }
+//        savedData = oldData as! [BMIRecord]
+        guard let oldHeights = UserDefaults.standard.array(forKey: "heights") else {
+            print("키 가져오는데 문제가 있는데")
+            heightsList = []
+            print(heightsList)
+            return
+        }
+        guard let oldweights = UserDefaults.standard.array(forKey: "weights") else {
+            print("무게 가져오는데 문제가 있는데")
+            weightsList = []
+            print(weightsList)
+            return
+        }
+        heightsList = oldHeights
+        weightsList = oldweights
+        print(#function, heightsList, weightsList)
+    }
+    
+    private func saveBMI(height: Double, weight: Double) {
+        print(#function, height, weight)
+        checkDataBox()
+//        let myData = BMIRecord(height: height, weight: weight)
+//        savedData.append(myData)
+//        UserDefaults.standard.set(savedData, forKey: "myrecord")
+//        print(UserDefaults.standard.array(forKey: "myrecord") ?? "문제가 있다 오바")
+        heightsList.append(height)
+        weightsList.append(weight)
+        UserDefaults.standard.set(heightsList, forKey: "heights")
+        UserDefaults.standard.set(weightsList, forKey: "weights")
+    }
+    
+    
     
     private func configureButton() {
         makeButtonHide()
@@ -78,6 +123,7 @@ class BmiCalculatorViewController: UIViewController {
         var bmi = weight / (height * height)
         bmi = round(bmi * 100) / 100
         userBMI = bmi
+        saveBMI(height: height, weight: weight)
     }
     
     // Mark: validation Check & show next / push Button
@@ -153,5 +199,9 @@ class BmiCalculatorViewController: UIViewController {
               vc.myWeight = userWeight
           }
       }
- 
 }
+
+//struct BMIRecord: Codable{
+//    let height: Double
+//    let weight: Double
+//}
